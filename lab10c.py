@@ -21,6 +21,10 @@ dark = '''
     background-color: black;
     color: white
     }
+
+    #head {
+    background-color: black;
+    color: #ADD8E6}
 </style>
 '''
 
@@ -63,15 +67,15 @@ with stream.container():
     lefttest_column, left_column, middle_column, right_column, rightest_column = stream.columns(5)
     with middle_column:
         stream.header("About me :wave:")
-    stream.markdown("<p style=\"font-size:30px\"><b>Hi, Welcome to my page. My name is Neel Faganiya</b></p>", unsafe_allow_html=True)
+    stream.markdown("<span id=\"head\" style=\"font-size:40px\"><b>Hi, Welcome to my page. My name is Neel Faganiya</b></span>", unsafe_allow_html=True)
     stream.write("I am a 3rd year Computer Science student at Toronto Metropolitan University (formerly Ryerson University), and this is a simple webpage that I have created for one of my labs for Course: CPS530")
     stream.write("Click [here](https://www.cs.torontomu.ca/~nfaganiy/) to have a look at my other web development projects.")
 
 with stream.container():
-    stream.write("---")
+    stream.header("", divider="rainbow")
     left_column, right_column = stream.columns(2)
     with left_column:
-        stream.header("How did I install the Framework?")
+        stream.markdown("<span id=\"head\" style=\"font-size:40px\"><b>How did I install the Framework?</b></span>", unsafe_allow_html=True)
         stream.write("##")
         stream.write(
             """
@@ -86,10 +90,10 @@ with stream.container():
         st_lottie(lotie, height=400)
 
 with stream.container():
-    stream.write("---")
+    stream.header("", divider="rainbow")
     left_column, right_column = stream.columns(2)
     with right_column:
-        stream.header("How did I build this page?")
+        stream.markdown("<span id=\"head\" style=\"font-size:40px\"><b>How did I build this page?</b></span>", unsafe_allow_html=True)
         stream.write("##")
         stream.write(
             """
@@ -104,10 +108,10 @@ with stream.container():
 
 
 with stream.container():
-    stream.write("---")
+    stream.header("", divider="rainbow")
     left_column, middle_column, right_column = stream.columns(3)
     with middle_column:
-        stream.header("Difficulties encountered")
+        stream.markdown("<span id=\"head\" style=\"font-size:40px\"><b>Difficulties encountered</b></span>", unsafe_allow_html=True)
         stream.write("##")
         stream.write(
             """
